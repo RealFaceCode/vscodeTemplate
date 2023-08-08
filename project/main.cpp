@@ -1,5 +1,4 @@
 #include <iostream>
-<<<<<<< HEAD
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -24,10 +23,4 @@ int main(int, char**)
     FT_Bool b;
     
     return 0;
-=======
-
-int main(int, char**)
-{
-    std::cout << "Hello, from Test!\n";
->>>>>>> fc9db04094e8ae0d074bebb3e880fdb576871884
 }
