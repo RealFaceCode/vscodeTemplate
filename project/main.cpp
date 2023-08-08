@@ -3,7 +3,7 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <freetype/freetype.h>
-
+ 
 int main(int, char**)
 {
     if(!glfwInit())

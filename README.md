@@ -1,0 +1,4 @@
+- [glew-cmake](https://github.com/Perlmint/glew-cmake)
+- [glm](https://github.com/g-truc/glm)
+- [glfw](https://github.com/glfw/glfw)
+- [freetype](https://github.com/freetype/freetype)
