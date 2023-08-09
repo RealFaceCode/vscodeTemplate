@@ -9,30 +9,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 file(GLOB_RECURSE SOURCE_FILES "project/*.cpp" "project/*.hpp" "project/*.c" "project/*.h")
 
-add_subdirectory("dependencies/freetype")
-add_subdirectory("dependencies/glew-cmake/build/cmake")
-add_subdirectory("dependencies/glfw")
-
-find_package(OpenGL REQUIRED)
-message(STATUS "OPENGL_FOUND:= ${OPENGL_FOUND}")
-
-if(OPENGL_FOUND)
-    message('OPENGL_FOUND-is-true')
-else()
-    message('OPENGL_FOUND-is-false')
-endif()
-
-message(STATUS "OPENGL_INCLUDE_DIR:= ${OPENGL_INCLUDE_DIR}")
-message(STATUS "OPENGL_LIBRARY:= ${OPENGL_LIBRARY}")
-message(STATUS "OPENGL_LIBRARIES:= ${OPENGL_LIBRARIES}")
-
 add_executable(App ${SOURCE_FILES})
-target_link_libraries(App freetype ${OPENGL_LIBRARIES} glew_s glfw)
+target_link_libraries(App)
 
-target_include_directories(App PUBLIC
-    dependencies/glfw/include
-    dependencies/glew-cmake/include
-    dependencies/glm
-    dependencies/freetype/include
-    ${OPENGL_INCLUDE_DIR}
-)
+target_include_directories(App PUBLIC)
